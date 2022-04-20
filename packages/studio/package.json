@@ -1,12 +1,11 @@
 {
   "private": true,
-  "name": "blog-with-gatsby-studio",
-  "version": "1.0.15",
+  "name": "@updatemybrowser/studio",
+  "version": "4.0.0",
+  "author": "Joram van den Boezem <hi@joram.dev>",
   "main": "package.json",
-  "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "dev": "sanity start",
-    "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "build": "sanity build",
     "graphql-deploy": "sanity graphql deploy --playground",
     "lint": "eslint .",
@@ -30,5 +29,12 @@
     "sanity-plugin-dashboard-widget-document-list": "^0.0.13",
     "sanity-plugin-dashboard-widget-netlify": "^1.2.1",
     "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
   }
 }
