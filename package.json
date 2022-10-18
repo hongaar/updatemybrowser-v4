@@ -5,13 +5,13 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build --parallel",
-    "dev": "lerna run dev --parallel",
-    "format": "lerna run format",
+    "build": "yarn workspaces foreach --parallel --interlaced run build",
+    "dev": "yarn workspaces foreach --parallel --interlaced run dev",
+    "format": "yarn workspaces foreach run format",
     "build:studio": "cd studio && npm run build",
     "build:web": "(cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
-    "graphql-deploy": "lerna run graphql-deploy",
-    "lint": "lerna run lint",
+    "graphql-deploy": "yarn workspaces foreach run graphql-deploy",
+    "lint": "yarn workspaces foreach run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "packageManager": "yarn@3.2.0"
