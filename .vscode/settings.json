@@ -1,0 +1,4 @@
+{
+  "eslint.packageManager": "yarn",
+  "eslint.workingDirectories": ["packages/studio", "packages/web"]
+}
