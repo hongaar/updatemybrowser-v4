@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="dist/bundle.js"></script>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+      .test {
+        width: 100vw;
+        height: 100vh;
+        padding: 1em;
+
+        font-family: 'Fira Mono', monospace;
+        font-size: 1.5rem;
+
+        border: 0;
+        color: darkred;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea class="test"></textarea>
+    <script type="text/javascript">
+      document.querySelector('.test').value = JSON.stringify(
+        UMB.detect(),
+        void 0,
+        2
+      )
+    </script>
+  </body>
+</html>
