@@ -1,7 +1,7 @@
 export const icon = {
   name: 'icon',
   type: 'image',
-  title: 'Image',
+  title: 'Icon',
   options: {
     hotspot: false,
   },

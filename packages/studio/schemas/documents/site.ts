@@ -8,49 +8,30 @@ export const site = {
     {
       name: 'branding',
       title: 'Branding',
-      options: { collapsible: true, collapsed: true },
+      options: { collapsible: true, collapsed: false },
     },
   ],
   preview: {
     select: {
       title: 'name',
-      subtitle: 'vendor',
+      subtitle: 'domain',
       media: 'icon',
     },
   },
   fields: [
     {
-      name: 'category',
-      title: 'Category',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Browser', value: 'browser' },
-          { title: 'Operating System', value: 'os' },
-        ],
-      },
-      validation: (Rule) => Rule.required(),
-    },
-    {
       name: 'name',
       title: 'Name',
-      description: 'e.g. Windows or Firefox',
+      description: 'e.g. Update my Browser',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
-    slug({ source: 'name' }),
+    slug(),
     {
-      name: 'vendor',
-      title: 'Vendor',
-      description: 'e.g. Microsoft or Mozilla',
+      name: 'domain',
+      title: 'Domain',
+      description: 'e.g. updatemybrowser.org',
       type: 'string',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'homepage',
-      title: 'Homepage',
-      description: 'e.g. https://www.microsoft.com/windows',
-      type: 'url',
       validation: (Rule) => Rule.required(),
     },
     {

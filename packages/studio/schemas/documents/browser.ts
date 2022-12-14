@@ -6,7 +6,7 @@ export const browser = {
     {
       name: 'branding',
       title: 'Branding',
-      options: { collapsible: true, collapsed: true },
+      options: { collapsible: true },
     },
   ],
   preview: {
@@ -18,28 +18,16 @@ export const browser = {
   },
   fields: [
     {
-      name: 'category',
-      title: 'Category',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Browser', value: 'browser' },
-          { title: 'Operating System', value: 'os' },
-        ],
-      },
-      validation: (Rule) => Rule.required(),
-    },
-    {
       name: 'name',
       title: 'Name',
-      description: 'e.g. Windows or Firefox',
+      description: 'e.g. Chrome or Firefox',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
       title: 'Slug',
-      description: 'e.g. windows or firefox',
+      description: 'e.g. chrome or firefox',
       type: 'slug',
       options: {
         source: 'name',
@@ -49,14 +37,14 @@ export const browser = {
     {
       name: 'vendor',
       title: 'Vendor',
-      description: 'e.g. Microsoft or Mozilla',
+      description: 'e.g. Google or Mozilla',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
     {
       name: 'homepage',
       title: 'Homepage',
-      description: 'e.g. https://www.microsoft.com/windows',
+      description: 'e.g. https://www.google.com/chrome/',
       type: 'url',
       validation: (Rule) => Rule.required(),
     },
@@ -69,7 +57,7 @@ export const browser = {
     {
       name: 'icon',
       title: 'Icon',
-      type: 'figure',
+      type: 'icon',
       fieldset: 'branding',
     },
     {

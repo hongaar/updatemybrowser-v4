@@ -8,7 +8,7 @@ export const localeText = {
     {
       title: 'Translations',
       name: 'translations',
-      options: { collapsible: true },
+      options: { collapsible: true, collapsed: true },
     },
   ],
   fields: languages.map((lang) => ({

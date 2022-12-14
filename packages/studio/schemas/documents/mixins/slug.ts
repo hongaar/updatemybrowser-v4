@@ -1,4 +1,4 @@
-export function slug(options = { source: 'title' }) {
+export function slug(options = { source: 'name' }) {
   return {
     name: 'slug',
     type: 'slug',

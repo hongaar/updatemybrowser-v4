@@ -6,7 +6,7 @@ export const os = {
     {
       name: 'branding',
       title: 'Branding',
-      options: { collapsible: true, collapsed: true },
+      options: { collapsible: true, collapsed: false },
     },
   ],
   preview: {
@@ -18,28 +18,16 @@ export const os = {
   },
   fields: [
     {
-      name: 'category',
-      title: 'Category',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Browser', value: 'browser' },
-          { title: 'Operating System', value: 'os' },
-        ],
-      },
-      validation: (Rule) => Rule.required(),
-    },
-    {
       name: 'name',
       title: 'Name',
-      description: 'e.g. Windows or Firefox',
+      description: 'e.g. Windows or Ubuntu',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
       title: 'Slug',
-      description: 'e.g. windows or firefox',
+      description: 'e.g. windows or ubuntu',
       type: 'slug',
       options: {
         source: 'name',
@@ -49,7 +37,7 @@ export const os = {
     {
       name: 'vendor',
       title: 'Vendor',
-      description: 'e.g. Microsoft or Mozilla',
+      description: 'e.g. Microsoft or Canonical',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
@@ -69,7 +57,7 @@ export const os = {
     {
       name: 'icon',
       title: 'Icon',
-      type: 'figure',
+      type: 'icon',
       fieldset: 'branding',
     },
     {
