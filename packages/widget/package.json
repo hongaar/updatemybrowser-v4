@@ -1,8 +1,8 @@
 {
-    "name": "@updatemybrowser/widget",
-    "version": "1.0.0",
-    "author": "Joram van den Boezem <joram@vandenboezem.nl>",
-    "dependencies": {
-        "@updatemybrowser/core": "^1.0.0"
-    }
+  "name": "@updatemybrowser/widget",
+  "version": "1.0.0",
+  "author": "Joram van den Boezem <joram@vandenboezem.nl>",
+  "dependencies": {
+    "@updatemybrowser/core": "^1.0.0"
+  }
 }

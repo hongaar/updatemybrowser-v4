@@ -1,15 +1,15 @@
-import S from '@sanity/desk-tool/structure-builder'
+import S from "@sanity/desk-tool/structure-builder";
 // @ts-ignore
-import EyeIcon from 'part:@sanity/base/eye-icon'
-import { IoIosGlobe } from 'react-icons/io'
-import { MdCloudDownload, MdComputer, MdOutlineLink } from 'react-icons/md'
-import IframePreview from '../previews/IframePreview'
+import EyeIcon from "part:@sanity/base/eye-icon";
+import { IoIosGlobe } from "react-icons/io";
+import { MdCloudDownload, MdComputer, MdOutlineLink } from "react-icons/md";
+import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
-const remoteURL = 'https://updatemybrowser-v-4.netlify.app'
-const localURL = 'http://localhost:8000'
+const remoteURL = "https://updatemybrowser-v-4.netlify.app";
+const localURL = "http://localhost:8000";
 const previewURL =
-  window.location.hostname === 'localhost' ? localURL : remoteURL
+  window.location.hostname === "localhost" ? localURL : remoteURL;
 
 export const getDefaultDocumentNode = ({ schemaType }) => {
   /**
@@ -19,18 +19,18 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
    * you can set up that logic in here too.
    * https://www.sanity.io/docs/structure-builder-reference#getdefaultdocumentnode-97e44ce262c9
    */
-  if (schemaType.startsWith('source')) {
+  if (schemaType.startsWith("source")) {
     return S.document().views([
       S.view.form(),
       S.view
         .component(IframePreview)
         .icon(EyeIcon)
-        .title('Preview')
+        .title("Preview")
         .options({ previewURL }),
-    ])
+    ]);
   }
-  return S.document().views([S.view.form()])
-}
+  return S.document().views([S.view.form()]);
+};
 
 /**
  * This defines how documents are grouped and listed out in the Studio.
@@ -43,31 +43,31 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
 
 const listItems = [
   {
-    title: 'Sites',
+    title: "Sites",
     icon: MdOutlineLink,
-    type: 'site',
+    type: "site",
   },
   {
-    title: 'Operating systems',
+    title: "Operating systems",
     icon: MdComputer,
-    type: 'os',
+    type: "os",
   },
   {
-    title: 'Browsers',
+    title: "Browsers",
     icon: IoIosGlobe,
-    type: 'browser',
+    type: "browser",
   },
 
   {
-    title: 'Releases',
+    title: "Releases",
     icon: MdCloudDownload,
-    type: 'release',
+    type: "release",
   },
-]
+];
 
 export default () =>
   S.list()
-    .title('Content')
+    .title("Content")
     .items([
       // S.listItem()
       //   .title("Sites")
@@ -86,4 +86,4 @@ export default () =>
           .schemaType(listItem.type)
           .child(S.documentTypeList(listItem.type).title(listItem.title))
       ),
-    ])
+    ]);

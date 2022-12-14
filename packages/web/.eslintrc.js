@@ -1,14 +1,14 @@
 module.exports = {
-  parser: '@babel/eslint-parser',
+  parser: "@babel/eslint-parser",
   parserOptions: {
-    sourceType: 'module',
+    sourceType: "module",
     ecmaVersion: 2020,
     ecmaFeatures: {
       jsx: true,
     },
     requireConfigFile: false,
     babelOptions: {
-      presets: ['@babel/preset-react'],
+      presets: ["@babel/preset-react"],
     },
   },
   env: {
@@ -16,18 +16,18 @@ module.exports = {
     browser: true,
   },
   rules: {
-    'react/prop-types': 'off',
+    "react/prop-types": "off",
   },
   extends: [
-    'eslint:recommended',
-    'plugin:import/errors',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
   ],
   settings: {
     react: {
-      pragma: 'React',
-      version: 'detect',
+      pragma: "React",
+      version: "detect",
     },
   },
-}
+};

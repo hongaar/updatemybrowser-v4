@@ -1,2 +1,2 @@
-export * from './caniuse'
-export * from './wikipedia'
+export * from "./caniuse";
+export * from "./wikipedia";

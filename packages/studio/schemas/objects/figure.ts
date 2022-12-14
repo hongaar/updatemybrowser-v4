@@ -1,26 +1,26 @@
 export const figure = {
-  name: 'figure',
-  type: 'image',
-  title: 'Figure',
+  name: "figure",
+  type: "image",
+  title: "Figure",
   options: {
     hotspot: true,
   },
   fields: [
     {
-      name: 'caption',
-      type: 'string',
-      title: 'Caption',
+      name: "caption",
+      type: "string",
+      title: "Caption",
       options: {
         isHighlighted: true,
       },
     },
     {
-      name: 'alt',
-      type: 'string',
-      title: 'Alternative text',
-      description: 'Important for SEO and accessiblity.',
+      name: "alt",
+      type: "string",
+      title: "Alternative text",
+      description: "Important for SEO and accessiblity.",
       validation: (Rule) =>
-        Rule.error('You have to fill out the alternative text.').required(),
+        Rule.error("You have to fill out the alternative text.").required(),
       options: {
         isHighlighted: true,
       },
@@ -28,8 +28,8 @@ export const figure = {
   ],
   preview: {
     select: {
-      imageUrl: 'asset.url',
-      title: 'caption',
+      imageUrl: "asset.url",
+      title: "caption",
     },
   },
-}
+};

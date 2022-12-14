@@ -1,18 +1,54 @@
 {
+  "name": "updatemybrowser-v4",
+  "version": "0.0.0",
   "private": true,
-  "name": "updatemybrowser",
+  "repository": "github:hongaar/updatemybrowser-v4",
+  "license": "MIT",
+  "author": "Joram van den Boezem <joram@vandenboezem.nl>",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "build": "yarn workspaces foreach --parallel --interlaced run build",
     "dev": "yarn workspaces foreach --parallel --interlaced run dev",
-    "format": "yarn workspaces foreach run format",
+    "format": "prettier --write --ignore-unknown .",
     "build:studio": "cd studio && npm run build",
     "build:web": "(cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
+    "doctoc": "doctoc README.md",
+    "format:check": "prettier --check --ignore-unknown .",
     "graphql-deploy": "yarn workspaces foreach run graphql-deploy",
     "lint": "yarn workspaces foreach run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "semantic-release",
+    "test": "echo 'not implemented'",
+    "todos": "leasot --exit-nicely --reporter markdown --ignore \"**/node_modules\" \"**/*.ts\" > TODO.md"
   },
-  "packageManager": "yarn@3.2.0"
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.2",
+    "@semantic-release/git": "10.0.1",
+    "doctoc": "2.2.1",
+    "husky": "8.0.2",
+    "leasot": "13.2.0",
+    "lint-staged": "13.1.0",
+    "moker": "0.10.0",
+    "prettier": "2.8.1",
+    "semantic-release": "19.0.5",
+    "semantic-release-yarn": "0.3.0"
+  },
+  "packageManager": "yarn@3.3.0",
+  "moker": {
+    "plugins": [
+      "prettier",
+      "husky",
+      "lint-staged",
+      "github-actions",
+      "semantic-release",
+      "devcontainer",
+      "doctoc",
+      "todos"
+    ],
+    "scoped": true
+  }
 }

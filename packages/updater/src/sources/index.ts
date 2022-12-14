@@ -1,3 +1,3 @@
-export * from './wikipedia'
-export * from './caniuse'
-export * from './whatismybrowser'
+export * from "./wikipedia";
+export * from "./caniuse";
+export * from "./whatismybrowser";

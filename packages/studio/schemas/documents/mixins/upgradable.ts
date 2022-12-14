@@ -1,1 +1,1 @@
-export const upgradable = {}
+export const upgradable = {};

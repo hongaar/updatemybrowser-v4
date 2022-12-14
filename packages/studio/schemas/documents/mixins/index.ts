@@ -1,2 +1,2 @@
-export * from './slug'
-export * from './upgradable'
+export * from "./slug";
+export * from "./upgradable";

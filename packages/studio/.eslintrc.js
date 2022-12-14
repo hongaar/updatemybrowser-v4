@@ -1,9 +1,9 @@
 module.exports = {
   parserOptions: {
-    sourceType: 'module',
+    sourceType: "module",
     ecmaVersion: 2015,
   },
   rules: {
-    'import/no-unresolved': ['error', { ignore: ['.*:.*'] }],
+    "import/no-unresolved": ["error", { ignore: [".*:.*"] }],
   },
-}
+};

@@ -1,3 +1,3 @@
-import { UMB } from './umb'
+import { UMB } from "./umb";
 
-export default new UMB()
+export default new UMB();
