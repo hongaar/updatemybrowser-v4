@@ -23,9 +23,9 @@ export function status(
         }
 
         return `[${colors.blue(arg._type)} ${colours[index](
-          arg.slug.current
+          arg.slug.current,
         )}]`;
       })
-      .join(" ")
+      .join(" "),
   );
 }

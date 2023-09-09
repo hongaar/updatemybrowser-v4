@@ -84,6 +84,6 @@ export default () =>
           .title(listItem.title)
           .icon(listItem.icon)
           .schemaType(listItem.type)
-          .child(S.documentTypeList(listItem.type).title(listItem.title))
+          .child(S.documentTypeList(listItem.type).title(listItem.title)),
       ),
     ]);

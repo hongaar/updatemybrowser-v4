@@ -16,7 +16,7 @@ function requireConfig(path: string) {
     return require(path);
   } catch (e) {
     console.error(
-      "Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js"
+      "Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js",
     );
     return {
       api: {

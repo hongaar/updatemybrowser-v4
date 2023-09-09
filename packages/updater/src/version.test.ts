@@ -16,7 +16,7 @@ describe("isNewer", () => {
     "%s is newer than %s",
     (newVersion, currentVersion) => {
       expect(isNewer(currentVersion, newVersion)).toBeTruthy();
-    }
+    },
   );
 
   test.each([

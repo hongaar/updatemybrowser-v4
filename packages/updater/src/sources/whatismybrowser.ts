@@ -45,8 +45,8 @@ export async function fetchWhatIsMyBrowser(source: WhatIsMyBrowserSource) {
       `Software ${
         source.software
       } not found in WhatIsMyBrowser data, keys found: ${Object.keys(
-        data.version_data
-      ).join(", ")}`
+        data.version_data,
+      ).join(", ")}`,
     );
   }
 
@@ -57,8 +57,8 @@ export async function fetchWhatIsMyBrowser(source: WhatIsMyBrowserSource) {
       `Platform ${
         source.platform
       } not found in WhatIsMyBrowser data, keys found: ${Object.keys(
-        software
-      ).join(", ")}`
+        software,
+      ).join(", ")}`,
     );
   }
 

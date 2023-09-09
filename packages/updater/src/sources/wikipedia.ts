@@ -92,8 +92,8 @@ export async function fetchWikipedia(source: WikipediaSource) {
       `Field ${source.field} not found in XML:\n${JSON.stringify(
         parsedData,
         undefined,
-        2
-      )}`
+        2,
+      )}`,
     );
   }
 

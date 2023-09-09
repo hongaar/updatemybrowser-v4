@@ -40,8 +40,8 @@ export async function fetchCanIUse(source: CanIUseSource) {
       `Agent ${
         source.agent
       } not found in CanIUse data, keys found: ${Object.keys(data.agents).join(
-        ", "
-      )}`
+        ", ",
+      )}`,
     );
   }
 

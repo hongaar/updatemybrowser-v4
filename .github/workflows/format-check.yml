@@ -1,4 +1,4 @@
-name: ci
+name: format-check
 
 on:
   push:
@@ -7,17 +7,13 @@ on:
   pull_request:
 
 jobs:
-  ci:
+  format-check:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16, 18, 20]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: lts/*
           cache: yarn
       - run: yarn install
-      - run: yarn build
-      - run: yarn test
+      - run: yarn format:check

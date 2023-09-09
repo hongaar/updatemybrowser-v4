@@ -34,7 +34,7 @@ const runMatcher = (queryResult: QueryResult) => async (matcher: Matcher) => {
   status(matcher, currentVersion, "Fetching new version...");
 
   const updaters = queryResult.updaters.filter(
-    (updater) => updater.matcher._ref === matcher._id
+    (updater) => updater.matcher._ref === matcher._id,
   );
 
   if (updaters.length) {
@@ -49,7 +49,7 @@ const runMatcher = (queryResult: QueryResult) => async (matcher: Matcher) => {
 const runUpdater =
   (queryResult: QueryResult, matcher: Matcher) => async (updater: Updater) => {
     const source = queryResult.sources.find(
-      (source) => source._id === updater.source._ref
+      (source) => source._id === updater.source._ref,
     );
 
     status(updater, "Updater found");

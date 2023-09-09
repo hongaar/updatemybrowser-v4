@@ -10,7 +10,7 @@ import { resolve } from "path";
 
 async function createBlogPostPages(
   graphql: CreatePagesArgs["graphql"],
-  actions: CreatePagesArgs["actions"]
+  actions: CreatePagesArgs["actions"],
 ) {
   const { createPage } = actions;
   const result = await graphql<{ allSanityPost: { edges: any[] } }>(`

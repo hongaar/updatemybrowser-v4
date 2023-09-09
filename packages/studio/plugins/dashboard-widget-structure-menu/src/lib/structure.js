@@ -43,7 +43,7 @@ export function serializeStructure(item, context, resolverArgs = []) {
   // Promise/observable returning a function, builder or plain JSON structure
   if (isSubscribable(item)) {
     return observableFrom(item).pipe(
-      mergeMap((val) => serializeStructure(val, context, resolverArgs))
+      mergeMap((val) => serializeStructure(val, context, resolverArgs)),
     );
   }
 
@@ -96,8 +96,8 @@ export function loadStructure() {
   if (!isStructure(structure)) {
     return throwError(
       new Error(
-        `Structure needs to export a function, an observable, a promise or a stucture builder, got ${typeof structure}`
-      )
+        `Structure needs to export a function, an observable, a promise or a stucture builder, got ${typeof structure}`,
+      ),
     );
   }
 

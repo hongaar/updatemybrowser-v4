@@ -10,13 +10,14 @@
   ],
   "scripts": {
     "build": "yarn workspaces foreach --parallel --interlaced run build",
-    "dev": "yarn workspaces foreach --parallel --interlaced run dev",
-    "format": "prettier --write --ignore-unknown .",
     "build:studio": "cd studio && npm run build",
     "build:web": "(cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
+    "dev": "yarn workspaces foreach --parallel --interlaced run dev",
     "doctoc": "doctoc README.md",
+    "format": "prettier --write --ignore-unknown .",
     "format:check": "prettier --check --ignore-unknown .",
     "graphql-deploy": "yarn workspaces foreach run graphql-deploy",
+    "postinstall": "husky install",
     "lint": "yarn workspaces foreach run lint",
     "release": "semantic-release",
     "test": "echo 'not implemented'",
@@ -26,16 +27,16 @@
     "*": "prettier --write --ignore-unknown"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "6.0.2",
+    "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "doctoc": "2.2.1",
-    "husky": "8.0.2",
-    "leasot": "13.2.0",
-    "lint-staged": "13.1.0",
-    "moker": "0.10.0",
-    "prettier": "2.8.1",
-    "semantic-release": "19.0.5",
-    "semantic-release-yarn": "0.3.0"
+    "husky": "8.0.3",
+    "leasot": "13.3.0",
+    "lint-staged": "14.0.1",
+    "moker": "1.4.0",
+    "prettier": "3.0.3",
+    "semantic-release": "21.1.1",
+    "semantic-release-yarn": "2.0.1"
   },
   "packageManager": "yarn@3.3.0",
   "moker": {

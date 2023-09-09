@@ -2,7 +2,7 @@ import compareVersions from "compare-versions";
 
 export function isNewer(
   currentVersion?: string | null,
-  newVersion?: string | null
+  newVersion?: string | null,
 ) {
   if (!currentVersion && !newVersion) {
     return false;
