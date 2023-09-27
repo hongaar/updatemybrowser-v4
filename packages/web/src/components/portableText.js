@@ -11,7 +11,6 @@ const components = {
   },
 };
 
-
 const PortableText = ({ blocks }) => (
   <BasePortableText
     value={blocks}

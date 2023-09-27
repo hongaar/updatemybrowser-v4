@@ -1,4 +1,5 @@
 {
   "eslint.packageManager": "yarn",
-  "eslint.workingDirectories": ["packages/studio", "packages/web"]
+  "eslint.workingDirectories": ["packages/studio", "packages/web"],
+  "graphql-config.load.rootDir": "packages/web"
 }

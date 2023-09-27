@@ -10,7 +10,7 @@ export const Figure = ({ node }) => {
   const gatsbyImageData = getGatsbyImageData(
     node,
     { maxWidth: 675 },
-    clientConfig.sanity
+    clientConfig.sanity,
   );
   return (
     <figure>

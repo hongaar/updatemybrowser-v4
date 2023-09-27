@@ -64,7 +64,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
                 name: "keywords",
                 content: keywords.join(", "),
               }
-            : []
+            : [],
         )
         .concat(meta)}
     />

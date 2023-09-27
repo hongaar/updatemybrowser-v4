@@ -12,8 +12,7 @@ export default {
                 "NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.",
               sites: [
                 {
-                  buildHookId:
-                    "62486ad955633830b5cf3c97",
+                  buildHookId: "62486ad955633830b5cf3c97",
                   title: "Sanity Studio",
                   name: "updatemybrowser-v-4-studio",
                   apiId: "7c9f43fb-2871-4c07-865b-426005fb8787",
@@ -31,8 +30,7 @@ export default {
         data: [
           {
             title: "GitHub repo",
-            value:
-              "https://github.com/hongaar/updatemybrowser-v4",
+            value: "https://github.com/hongaar/updatemybrowser-v4",
             category: "Code",
           },
           {
@@ -47,9 +45,9 @@ export default {
     {
       name: "document-list",
       options: {
-        title: "Recent blog posts",
-        order: "_createdAt desc",
-        types: ["post"],
+        title: "Browsers",
+        order: "_name desc",
+        types: ["browser"],
       },
       layout: { width: "medium" },
     },
